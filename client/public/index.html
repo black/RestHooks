@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>RestHook Client</title>
+</head>
+<body>
+	<h1>RestHook Client</h1>
+	<div class="result">Data</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$.get("http://localhost:3000/stream", function (data) {
+			console.log("data -- >",data);
+			$(".result").html("data -- > " + JSON.stringify(data));
+		});
+	</script>
+</body>
+</html>
